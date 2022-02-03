@@ -1,3 +1,5 @@
+import StepTwo from "./StepTwo";
+
 // ===> ici les props reçues par Form sont en destructuring
 const Form = ({
   nom,
@@ -8,6 +10,7 @@ const Form = ({
   setMail,
   setMdp,
   setConfirmationMdp,
+  setEtape,
 }) => {
   // ===>créons ensuite la fonction permettant d'envoyer les données entrées dans les différents champs du formulaire (aka. ce qui se passe lors du 'submit'  */
 
@@ -21,6 +24,16 @@ const Form = ({
     console.log("mail ===>", mail);
     console.log("mdp ===>", mdp);
     console.log("confirmationMdp ===> ", confirmationMdp);
+
+    {
+      /* 
+        // ===> condition : si mdp !===confirmationMdp, alors message d'alerte, bordure des champs en rouge, sinon étape 2  */
+    }
+    if (mdp !== confirmationMdp) {
+      return alert("Vous n'avez pas entré le même mot de passe");
+    } else {
+      return setEtape(2);
+    }
   };
 
   return (

@@ -1,7 +1,6 @@
 import "./App.css";
 import Form from "./components/Form";
 import { useState } from "react";
-import StepTwo from "./components/StepTwo";
 
 function App() {
   /* 
@@ -13,6 +12,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmPassword] = useState("");
+  const [step, setStep] = useState(1);
 
   return (
     // ===> A partir d'ici, nous devons utiliser seulement du JSX
@@ -32,15 +32,8 @@ function App() {
           setMail={setEmail}
           setMdp={setPassword}
           setConfirmationMdp={setConfirmPassword}
+          setEtape={setStep}
         />
-
-        {/* 
-        // ===> condition : si mdp !===confirmationMdp, alors message d'alerte, bordure des champs en rouge, sinon étape 2  */}
-        {password === confirmpassword ? (
-          alert("Vous n'avez pas entré le même mot de passe")
-        ) : (
-          <StepTwo />
-        )}
       </main>
 
       <footer>
