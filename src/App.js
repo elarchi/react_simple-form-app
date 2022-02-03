@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Form from "./components/Form";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <main>
+        <Form />
+      </main>
+
+      {/* /* *****************************  footer */}
+      <footer>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Made with <span>React</span> at{" "}
+          <a href="https://www.lereacteur.io/">Le Réacteur </a>
+          by
+          <span> Emilie Leury</span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </footer>
     </div>
   );
 }
