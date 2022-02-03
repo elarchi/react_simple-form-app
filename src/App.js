@@ -24,7 +24,12 @@ function App() {
         StepTwo */}
 
         {step === 2 ? (
-          <StepTwo />
+          <StepTwo
+            nom={username}
+            mail={email}
+            mdp={password}
+            setEtape={setStep}
+          />
         ) : (
           <Form
             // ===> passons des props à l'enfant de App, soit le composant Form

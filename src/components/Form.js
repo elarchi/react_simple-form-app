@@ -24,7 +24,9 @@ const Form = ({
     console.log("confirmationMdp ===> ", confirmationMdp);
 
     if (mdp !== confirmationMdp) {
-      alert("Vous n'avez pas entré le même mot de passe");
+      // alert("Vous n'avez pas entré le même mot de passe");
+
+      <p className="red_p">Les mots de passes ne sont pas identiques</p>;
     } else {
       setEtape(2);
     }
@@ -58,9 +60,11 @@ const Form = ({
           }}
         />
 
-        <h2>Password</h2>
+        {/* {mdp !== confirmationMdp && h1 } ; */}
 
+        <h2>Password</h2>
         <input
+          className={mdp !== confirmationMdp && "red_button"}
           value={mdp}
           type="password"
           placeholder="create your own password here"
@@ -73,6 +77,7 @@ const Form = ({
         <h2>Confirm your password</h2>
 
         <input
+          className={mdp !== confirmationMdp && "red_button"}
           value={confirmationMdp}
           type="password"
           placeholder="confirm your password"
@@ -81,11 +86,12 @@ const Form = ({
             setConfirmationMdp(event.target.value);
           }}
         />
+        {/* {mdp !== confirmationMdp && (
+          <p className="red_p">Les mots de passes ne sont pas identiques</p>
+        )} */}
       </div>
 
-      <button classname="submit_input" type="submit">
-        Register
-      </button>
+      <button type="submit">Register</button>
     </form>
   );
 };
