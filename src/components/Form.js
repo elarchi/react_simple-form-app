@@ -28,7 +28,6 @@ const Form = ({
       <div className="title_div">
         <h1 className="title_h1">Create account</h1>
       </div>
-
       <div className="fields_div">
         <h2 className="title_h2">Name</h2>
         <input
