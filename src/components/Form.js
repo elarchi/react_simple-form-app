@@ -25,14 +25,10 @@ const Form = ({
     console.log("mdp ===>", mdp);
     console.log("confirmationMdp ===> ", confirmationMdp);
 
-    {
-      /* 
-        // ===> condition : si mdp !===confirmationMdp, alors message d'alerte, bordure des champs en rouge, sinon étape 2  */
-    }
     if (mdp !== confirmationMdp) {
-      return alert("Vous n'avez pas entré le même mot de passe");
+      alert("Vous n'avez pas entré le même mot de passe");
     } else {
-      return setEtape(2);
+      setEtape(2);
     }
   };
 
@@ -85,7 +81,7 @@ const Form = ({
         />
       </div>
 
-      <button value={confirmationMdp} classname="submit_input" type="submit">
+      <button classname="submit_input" type="submit">
         Register
       </button>
     </form>

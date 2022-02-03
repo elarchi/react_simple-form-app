@@ -12,12 +12,13 @@ main {
 
 /* -------------------------------- style of heading */
 h1 {
-  height: 28px;
+  font-size: 28px;
 }
 
 h2 {
-  height: 16px;
+  font-size: 16px;
   color: black;
+  font-weight: 300;
 }
 
 /* --------------------------------MAIN  */
@@ -42,8 +43,8 @@ input {
   width: 100%;
 }
 
-.submit_input {
-  height: 100px;
+button {
+  box-sizing: 100px;
 }
 
 /* --------------------------------FOOTER  */
