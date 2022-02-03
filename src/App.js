@@ -1,6 +1,7 @@
 import "./App.css";
 import Form from "./components/Form";
 import { useState } from "react";
+import StepTwo from "./components/StepTwo";
 
 function App() {
   /* 
@@ -19,21 +20,28 @@ function App() {
 
     <div className="App">
       <main>
-        <Form
-          // ===> passons des props à l'enfant de App, soit le composant Form
+        {/* ===> si step = 1, alors j'affiche Form, si step = 2, alors j'affiche
+        StepTwo */}
 
-          // ===> premièrement passons en props les différents états initialisés
-          nom={username}
-          mail={email}
-          mdp={password}
-          confirmationmdp={confirmpassword}
-          // ===> puis passons en props les différents appel de fonction
-          setNom={setUsername}
-          setMail={setEmail}
-          setMdp={setPassword}
-          setConfirmationMdp={setConfirmPassword}
-          setEtape={setStep}
-        />
+        {step === 2 ? (
+          <StepTwo />
+        ) : (
+          <Form
+            // ===> passons des props à l'enfant de App, soit le composant Form
+
+            // ===> premièrement passons en props les différents états initialisés
+            nom={username}
+            mail={email}
+            mdp={password}
+            confirmationMdp={confirmpassword}
+            // ===> puis passons en props les différents appel de fonction
+            setNom={setUsername}
+            setMail={setEmail}
+            setMdp={setPassword}
+            setConfirmationMdp={setConfirmPassword}
+            setEtape={setStep}
+          />
+        )}
       </main>
 
       <footer>

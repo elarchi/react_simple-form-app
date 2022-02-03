@@ -1,5 +1,3 @@
-import StepTwo from "./StepTwo";
-
 // ===> ici les props reçues par Form sont en destructuring
 const Form = ({
   nom,
@@ -59,7 +57,9 @@ const Form = ({
             setMail(event.target.value);
           }}
         />
+
         <h2>Password</h2>
+
         <input
           value={mdp}
           type="password"
@@ -69,7 +69,9 @@ const Form = ({
             setMdp(event.target.value);
           }}
         />
+
         <h2>Confirm your password</h2>
+
         <input
           value={confirmationMdp}
           type="password"
